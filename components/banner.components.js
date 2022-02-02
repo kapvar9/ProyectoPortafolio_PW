@@ -1,10 +1,12 @@
+import Image from "next/image"
+
 const Banner = () => {
     return <div>
         <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
 
-            <div id="carrusel" className="carousel-inner">
+            <div id="carousel" className="carousel-inner">
                 <div className="carousel-item active">
-                    <img src="https://i.ytimg.com/vi/zZCyJiyWdX0/maxresdefault.jpg" className="d-block w-100" alt="..."/>
+                    <image src="https://i.ytimg.com/vi/zZCyJiyWdX0/maxresdefault.jpg" className="d-block w-100" alt="..."/>
                 </div>
             </div>
 
