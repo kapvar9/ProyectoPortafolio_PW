@@ -9,9 +9,9 @@ function MainPage() {
     const [debeMostrarModal, setDebeMostrarModal] = useState(false)
     const [listadoProyectos, setListadoProyectos] = useState([])
     const [listadoUsuarios, setListadoUsuarios] = useState([])
+    const [listadoTecnologias, setListadoTecnologias] = useState([])
     const [modoFormulario, setModoFormulario] = useState("nuevo") // modo: nuevo | edicion
     const [proyecto, setProyecto] = useState(null)
-    const [listadoTecnologias, setListadoTecnologias] = useState([])
 
     const obtenerProyectosHTTP = async () => {
         let response = await fetch("/api/proyectos")
@@ -24,7 +24,6 @@ function MainPage() {
         const data = await response.json()
         return data
     }
-
 
     const obtenerTecnologiasHTTP = async () => {
         let response = await fetch("/api/tecnologias")
@@ -144,7 +143,7 @@ function MainPage() {
             onActualizarProyecto={ actualizarProyectoHandler }
             modo={ modoFormulario } proyecto={ proyecto }
             usuarios= { listadoUsuarios }
-            tecnologias = {listadoTecnologias} />
+            tecnologias={ listadoTecnologias } />
     </div>
 }
 

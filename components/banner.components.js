@@ -1,4 +1,5 @@
 import { loadGetInitialProps } from "next/dist/shared/lib/utils"
+import { Image } from "react-bootstrap"
 
 const Banner = (props) => {
     return <div>
@@ -9,11 +10,11 @@ const Banner = (props) => {
                     props.images.map((imagen, index) => {
                         if (index == 0) {
                             return <div key={imagen} className="carousel-item active">
-                                <img src={ imagen } className="d-block w-100" alt="..."/>
+                                <Image src={ imagen } className="d-block w-100" alt="..."/>
                             </div>
                         }else {
                             return <div key={imagen} className="carousel-item">
-                                <img src={ imagen } className="d-block w-100" alt="..."/>
+                                <Image src={ imagen } className="d-block w-100" alt="..."/>
                             </div>
                         }
                         
